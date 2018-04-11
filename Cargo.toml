@@ -24,3 +24,13 @@ flate2 = "0.2"
 rand = "0.4"
 thrift = "0.0.4"
 x86intrin = "0.4.3"
+
+# TODO: only include this when the 'download-thrift-gen' flag is on.
+[build-dependencies]
+reqwest = "0.8.5"
+
+[features]
+download-thrift-gen = []
+
+[package.metadata.docs.rs]
+features = ["download-thrift-gen"]
