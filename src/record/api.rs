@@ -344,7 +344,7 @@ mod tests {
       ("z".to_string(), RowField::Float(3.1)),
       ("a".to_string(), RowField::Str("abc".to_string()))
     ];
-    let row = RowField::Group(Row::new(fields));
+    let row = RowField::Group(make_row(fields));
     assert_eq!(format!("{}", row), "{x: null, Y: 2, z: 3.1, a: \"abc\"}");
 
     let row = RowField::List(vec![
